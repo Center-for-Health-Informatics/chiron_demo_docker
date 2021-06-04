@@ -1,0 +1,27 @@
+
+version: "3"
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+  app:
+    volumes:
+      - static:/static          # map "static" volume to static directory
+    image: jmeinken/chiron-demo
+    ports:
+      - "8000:8000"             # this will be running at port 8000
+    depends_on:
+      - mongo
+  nginx:
+    image: jmeinken/nginx-for-django
+    volumes:
+      - static:/static
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+
+volumes:
+  static:
