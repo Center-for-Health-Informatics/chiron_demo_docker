@@ -1,4 +1,4 @@
-## Docker Installation for Chiron Demo
+## Docker Installation for Chiron Demo Website
 
 1. Install Docker and Docker Compose
     - for Windows and Mac, Docker Desktop includes both Docker and Docker Compose
@@ -16,5 +16,13 @@ git clone [repository link]
 cd chiron_demo_docker
 docker compose up
 ```
+
+4. view in browser
+   - after starting up (may take several minutes), your site should be available on port 8001
+   - open a web browser and open http://localhost:8008
+   
+## Modifications
+
+- to change the port to something besides 8008, edit nginx ports in `docker-compose.yaml`
 
    
