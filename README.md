@@ -1,4 +1,4 @@
-## Docker Installation for Chiron Demo Website
+## Install Chiron Demo Website Using Docker
 
 1. Install Docker and Docker Compose
     - for Windows and Mac, Docker Desktop includes both Docker and Docker Compose
